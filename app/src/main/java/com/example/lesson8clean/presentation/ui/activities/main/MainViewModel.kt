@@ -8,7 +8,7 @@ class MainViewModel(val calculateUseCase: CalculateUseCase): ViewModel() {
      val resultData=MutableLiveData<Double>()
 
     fun calculate(operation:String,operandFirst:Double,operandSecond:Double){
-        val result=calculateUseCase.calculateResult(operation,operandFirst,operandSecond)
+        val result=calculateUseCase(operation,operandFirst,operandSecond)
         resultData.value=result
     }
 

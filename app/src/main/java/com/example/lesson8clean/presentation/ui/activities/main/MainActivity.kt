@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.example.lesson8clean.R
+import com.example.lesson8clean.Woolf
+import com.example.lesson8clean.data.enums.Status
 import com.example.lesson8clean.data.repository.CalculateRepositoryImpl
 import com.example.lesson8clean.databinding.ActivityMainBinding
 import com.example.lesson8clean.domain.repository.CalculateRepository
@@ -23,6 +25,40 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+
+
+
+
+
+
+       /*val status=Status.ONLINE
+        when(status){
+         Status.ONLINE->{
+         }
+         Status.OFFLINE->{
+         }else->{
+          }}
+        */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+    private fun calculator() {
         binding.multiplyBtn.setOnClickListener {
             val first=binding.firstText.text.toString().toDouble()
             val second=binding.secondtText.text.toString().toDouble()
@@ -47,13 +83,5 @@ class MainActivity : AppCompatActivity() {
             binding.resultText.text=it.toString()
 
         }
-
-
-
-
-
-
-
-
     }
 }
